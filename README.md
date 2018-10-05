@@ -1,6 +1,8 @@
 ReactorKit via Carthage
 =======================
 
+[![Build Status](https://travis-ci.org/kawoou/ReactorKit-Carthage.svg?branch=master)](https://travis-ci.org/kawoou/ReactorKit-Carthage)
+
 * Dynamic framework
 
 ```ruby

@@ -1,0 +1,30 @@
+osx_image: xcode10
+language: objective-c
+sudo: required
+branches:
+  only:
+  - master
+  - /^[\d]+.[\d]+.[\d]+$/
+
+install:
+- eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
+
+before_script:
+- set -o pipefail
+- scripts/clean.sh
+- scripts/clone.sh
+
+script:
+- scripts/build.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: VH2LkwtTW6sAtpm1uxErIMwRPffQDWXXYmXdEDAFrzhjvv6VoUgQvMPtEgmGt8qOHkGtHt/iHQ4B4MePbKUidAkeYcaFYUSWNQmZu0+cxaseZcPbfw8v1xntMPGQNth/Hlwnqrnj3EWatNJ+UMe4I5D/ClWC8/tq1zj4KwGInC5r7R3Rx6qTor0frPEN05/zRuVF2ija/HRn5p623Vf9dyaPxJgq6u7JeIwk45YlG5bfMswovLEzBr3//+gZMkV5sRFrUjUpVyP2eNwBO53smMR389GoT8rRIiiw72Zclwx75mOIWoLCkcgQ1WFg6VxTZikDqAH2OREW2ZhUnxh8Al7l4SECrOuRR5y5I3ZmRxio265sMyEG8j8RucpphC5Nz3c05i5EsJij49RN4tSq8Nx3lXBb1wrnb7B2SJyFbZLBRrkxOLRPKqQJvx7DPPkMcrBgu9vdLOKumiC//nKwxg9aM5JOqsn0bj8OM5xErq+pCzs1AHjrOG8d+FIf/XDmpcmuKrhkeqjn5MmtjcEv2OPkjjFnbmmmHQ2KSUEPrglDfYvHh1eme2OUU26ZOecE5894APTMXOdvWiEDRYwr8iRjLl0PWkNkKt0jtxKdalv+GUBF23SYfX2pnJuHvdpyk6eYFZa8AICtxn1KJvcdu2WOIGf9hP2jx7nwEIP94mI=
+  file: 
+    - ReactorKit.framework.zip
+    - ReactorKit-Static.framework.zip
+  skip_cleanup: true
+  on:
+    repo: kawoou/ReactorKit-Carthage
+    tags: true

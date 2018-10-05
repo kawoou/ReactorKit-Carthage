@@ -8,8 +8,7 @@ ReactorKit via Carthage
 ```ruby
 binary "http://kawoou.kr/ReactorKit-Carthage/ReactorKit"
 
-# Swift 4.2
-binary "http://kawoou.kr/ReactorKit-Carthage/ReactorKit-Static" == 1.2.0
+binary "http://kawoou.kr/ReactorKit-Carthage/ReactorKit" == 1.2.0   # Swift 4.2
 ```
 
 

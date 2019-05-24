@@ -5,6 +5,7 @@ cd Build/ReactorKit
 
 xcconfig="${PWD}/Config.xcconfig"
 echo $xcconfig
+echo "SWIFT_VERSION = 5.0" >> $xcconfig
 
 # Dynamic framework
 echo "Build: Dynamic framework"

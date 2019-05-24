@@ -9,7 +9,7 @@ ReactorKit via Carthage
 binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit"
 
 binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit" == 1.2.0   # Swift 4.2
-binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit" == 1.2.1   # Swift 4.2.1
+binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit" == 1.2.1   # Swift 5.0
 ```
 
 
